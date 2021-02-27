@@ -1,4 +1,4 @@
-package com.yashraj.groceryapp;
+package com.yashraj.groceryapp.API;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;

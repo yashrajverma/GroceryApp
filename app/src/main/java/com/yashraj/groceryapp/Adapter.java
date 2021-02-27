@@ -9,13 +9,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.yashraj.groceryapp.Model.RecordsItem;
+
 import java.util.List;
 
 public class Adapter  extends RecyclerView.Adapter<Adapter.AdapterViewHolder> {
     Context context;
-    List<Records> list;
+    List<RecordsItem> list;
 
-    public Adapter(Context context, List<Records> list) {
+    public Adapter(Context context, List<RecordsItem> list) {
         this.context = context;
         this.list = list;
     }
@@ -29,11 +31,11 @@ public class Adapter  extends RecyclerView.Adapter<Adapter.AdapterViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull AdapterViewHolder holder, int position) {
-        Records records=list.get(position);
+        RecordsItem records=list.get(position);
         holder.state.setText(records.getState());
-        holder.max_price.setText(String.valueOf(records.getMax_price()));
-        holder.min_price.setText(String.valueOf(records.getMin_price()));
-        holder.date.setText(String.valueOf(records.getArrival_date()));
+        holder.max_price.setText(String.valueOf(records.getMaxPrice()));
+        holder.min_price.setText(String.valueOf(records.getMinPrice()));
+        holder.date.setText(String.valueOf(records.getArrivalDate()));
         holder.district.setText(records.getDistrict());
         holder.market.setText(records.getMarket());
         holder.commodity.setText(records.getCommodity());
