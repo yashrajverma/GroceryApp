@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
            @Override
            public void onFailure(Call<Response> call, Throwable t) {
                Toast.makeText(getApplicationContext(),"Data: "+t.getMessage(),Toast.LENGTH_LONG).show();
-               Log.i("TAG", "onResponse: "+t.getMessage());
+               Log.i("TAG", "onFailure: "+t.getMessage());
            }
        });
     }

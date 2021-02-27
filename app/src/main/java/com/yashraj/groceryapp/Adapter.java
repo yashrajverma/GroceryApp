@@ -46,8 +46,14 @@ public class Adapter  extends RecyclerView.Adapter<Adapter.AdapterViewHolder> {
         return list.size();
     }
 
-    public class AdapterViewHolder  extends RecyclerView.ViewHolder{
-        private TextView district,state,date,min_price,max_price,commodity,market;
+    public static class AdapterViewHolder  extends RecyclerView.ViewHolder{
+        private final TextView district;
+        private final TextView state;
+        private final TextView date;
+        private final TextView min_price;
+        private final TextView max_price;
+        private final TextView commodity;
+        private final TextView market;
         public AdapterViewHolder(@NonNull View itemView) {
             super(itemView);
             district=itemView.findViewById(R.id.district);
